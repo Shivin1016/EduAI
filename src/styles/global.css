@@ -1,0 +1,44 @@
+
+:root {
+  --light-blue: #9aacf0;
+  --mid-blue: #193cb8;
+  --dark-blue: #101828;
+}
+.animated-background {  
+  background: radial-gradient(
+    circle at 50% 70%,
+    var(--mid-blue), var(--light-blue) 
+  );
+  background-size: 100% 100%;
+  /* animation: gradient-animation 15s ease infinite; */
+}
+@keyframes gradient-animation{
+    0% , 100%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+}
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-animated-gradient {
+  background: linear-gradient(135deg, #abb9f3, #e0e7ff, #94a9ee, #dbeafe);
+  background-size: 300% 300%;
+  animation: gradientShift 10s ease infinite;
+}
+
+
+.filter-white {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(110%) contrast(100%);
+}
